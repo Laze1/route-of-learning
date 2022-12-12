@@ -1,14 +1,11 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityMainBinding
-import com.swallowsonny.convertextlibrary.toHexString
-import java.io.ByteArrayOutputStream
+import com.example.myapplication.generics.GenericsList
+import com.example.myapplication.generics.Wrapper
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,17 +18,24 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         binding.img.setImageResource(R.mipmap.ic_test)
-        test()
-    }
-    /**
-     * @see newTest
-     * */
-    @Deprecated("暂时废弃了 ")
-    fun test(){
-
     }
 
-    fun newTest(){
+}
 
-    }
+fun main() {
+    val wrapperStr = Wrapper("String")
+    val wrapperInt = Wrapper(5)
+    println(wrapperStr.instant)
+    println(wrapperInt.instant.toString())
+
+
+    val list = GenericsList<String>()
+    list.add("什么")
+    val get = list.get(0)
+    println(get)
+    val list2 = GenericsList<Int>()
+    list2.add(124)
+    val get2 = list2.get(0)
+    println(get2)
+
 }
