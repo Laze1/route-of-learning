@@ -4,38 +4,28 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityMainBinding
-import com.example.myapplication.generics.GenericsList
-import com.example.myapplication.generics.Wrapper
+import com.example.myapplication.ext.inflate
+import com.example.myapplication.ext.onClick
+import com.example.myapplication.ext.startActivity
+import com.example.myapplication.workmanager.WorkManagerActivity
 
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+
+    private val binding: ActivityMainBinding by inflate()
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
-        binding.img.setImageResource(R.mipmap.ic_test)
+        setClick()
     }
 
-}
-
-fun main() {
-    val wrapperStr = Wrapper("String")
-    val wrapperInt = Wrapper(5)
-    println(wrapperStr.instant)
-    println(wrapperInt.instant.toString())
-
-
-    val list = GenericsList<String>()
-    list.add("什么")
-    val get = list.get(0)
-    println(get)
-    val list2 = GenericsList<Int>()
-    list2.add(124)
-    val get2 = list2.get(0)
-    println(get2)
+    private fun setClick() {
+        binding.apply {
+            btnWork.onClick {
+                startActivity(WorkManagerActivity::class.java)
+            }
+        }
+    }
 
 }
