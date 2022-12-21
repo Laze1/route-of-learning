@@ -7,6 +7,7 @@ import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.ext.inflate
 import com.example.myapplication.ext.onClick
 import com.example.myapplication.ext.startActivity
+import com.example.myapplication.flow.FlowActivity
 import com.example.myapplication.workmanager.WorkManagerActivity
 
 
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             btnWork.onClick {
                 startActivity(WorkManagerActivity::class.java)
+            }
+            btnFlow.onClick {
+                startActivity(FlowActivity::class.java)
             }
         }
     }

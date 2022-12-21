@@ -15,5 +15,12 @@
         android:layout_margin="5dp"
         android:text="@string/work_manager"
         />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFlow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="flow"
+        />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
