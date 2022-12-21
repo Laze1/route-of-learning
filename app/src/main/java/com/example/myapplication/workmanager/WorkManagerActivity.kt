@@ -3,7 +3,6 @@ package com.example.myapplication.workmanager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.OutOfQuotaPolicy
 import androidx.work.WorkManager
 import androidx.work.WorkRequest
 import com.example.myapplication.R
@@ -27,7 +26,7 @@ class WorkManagerActivity : AppCompatActivity() {
 
     private fun testWorkManager() {
         val uploadWorkRequest: WorkRequest = OneTimeWorkRequestBuilder<UploadWorker>()
-            .setExpedited(OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST)
+//            .setExpedited(OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST)
             .build()
         WorkManager.getInstance(this).enqueue(uploadWorkRequest)
     }
