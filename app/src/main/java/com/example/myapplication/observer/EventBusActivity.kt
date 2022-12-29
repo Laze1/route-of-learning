@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityEventBusBinding
 import com.example.myapplication.ext.inflate
+import com.example.myapplication.ext.onClick
 
 /**
  *
@@ -18,8 +19,10 @@ class EventBusActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        EventBus.post("收到消息了")
 
+        binding.btnSendMessage.onClick {
+            EventBus.post("MESSAGE!!")
+        }
     }
 
 }
