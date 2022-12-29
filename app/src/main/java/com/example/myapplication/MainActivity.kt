@@ -11,6 +11,7 @@ import com.example.myapplication.flow.FlowActivity
 import com.example.myapplication.observer.EventBus
 import com.example.myapplication.observer.EventBusActivity
 import com.example.myapplication.observer.Subscriber
+import com.example.myapplication.paging.PagingActivity
 import com.example.myapplication.workmanager.WorkManagerActivity
 
 
@@ -42,6 +43,9 @@ class MainActivity : AppCompatActivity() {
             }
             btnEventBus.onClick {
                 startActivity(EventBusActivity::class.java)
+            }
+            btnPaging.onClick {
+                startActivity(PagingActivity::class.java)
             }
         }
     }
