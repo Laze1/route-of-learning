@@ -20,6 +20,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".observer.EventBusActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".workmanager.WorkManagerActivity"
             android:exported="false">
             <meta-data

@@ -7,7 +7,7 @@ package com.example.myapplication.observer
  * @date 2022/12/29 15:46
  *
  */
-class EventBus {
+object EventBus {
     private val subscribers = mutableMapOf<Class<*>, MutableList<Subscriber>>()
 
     fun <T : Any> register(eventType: Class<T>, subscriber: Subscriber) {
