@@ -28,3 +28,7 @@ object EventBus {
         }
     }
 }
+
+interface Subscriber {
+    fun onEvent(event: Any)
+}
