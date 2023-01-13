@@ -1,8 +1,5 @@
 package com.example.myapplication.annotation
 
-import java.lang.annotation.ElementType
-
-
 //定义一个注解
 annotation class MyAnnotation
 

@@ -8,6 +8,7 @@ import com.example.myapplication.ext.inflate
 import com.example.myapplication.ext.onClick
 import com.example.myapplication.ext.startActivity
 import com.example.myapplication.flow.FlowActivity
+import com.example.myapplication.hilt.HiltActivity
 import com.example.myapplication.observer.EventBus
 import com.example.myapplication.observer.EventBusActivity
 import com.example.myapplication.observer.Subscriber
@@ -29,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setClick()
 
-
         EventBus.register(String::class.java,subscriber)
     }
 
@@ -46,6 +46,9 @@ class MainActivity : AppCompatActivity() {
             }
             btnPaging.onClick {
                 startActivity(PagingActivity::class.java)
+            }
+            btnHilt.onClick {
+                startActivity(HiltActivity::class.java)
             }
         }
     }
