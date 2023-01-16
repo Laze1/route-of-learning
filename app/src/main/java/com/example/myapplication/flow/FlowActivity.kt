@@ -30,6 +30,10 @@ class FlowActivity : AppCompatActivity() {
             viewModel.add()
         }
 
+        initFlow()
+    }
+
+    private fun initFlow() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED){
                 viewModel.state.collect{
