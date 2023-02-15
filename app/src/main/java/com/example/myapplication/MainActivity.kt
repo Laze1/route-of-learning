@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -50,6 +52,24 @@ class MainActivity : AppCompatActivity() {
             btnHilt.onClick {
                 startActivity(HiltActivity::class.java)
             }
+            btnUrl.onClick {
+                goPage()
+            }
+        }
+    }
+
+    private fun goPage() {
+//        Intent().apply {
+//            val uri = Uri.parse("paraches://")
+//            action = "android.intent.action.VIEW"
+//            data = uri
+//            startActivity(this)
+//        }
+        Intent().apply {
+            val uri = Uri.parse("learnmyapp://host/welcome?arg0=1")
+            action = "android.intent.action.VIEW"
+            data = uri
+            startActivity(this)
         }
     }
 
