@@ -60,13 +60,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun goPage() {
 //        Intent().apply {
-//            val uri = Uri.parse("paraches://")
+//            val uri = Uri.parse("paraches://decorelink/share?key=10086")
 //            action = "android.intent.action.VIEW"
 //            data = uri
 //            startActivity(this)
 //        }
         Intent().apply {
-            val uri = Uri.parse("learnmyapp://host/welcome?arg0=1")
+            val uri = Uri.parse("learnmyapp://host/welcome?key=10088")
             action = "android.intent.action.VIEW"
             data = uri
             startActivity(this)

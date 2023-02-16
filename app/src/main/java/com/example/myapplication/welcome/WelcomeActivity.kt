@@ -1,5 +1,8 @@
 package com.example.myapplication.welcome
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -19,15 +22,21 @@ class WelcomeActivity : AppCompatActivity() {
         val intent = intent
         val scheme = intent.scheme
         val uri = intent.data
-        binding.info.text = "$uri"
         if (uri != null) {
             val host = uri.host
             val path = uri.path
             val query = uri.query
-            val test1 = uri.getQueryParameter("arg0")//参数
+            val key = uri.getQueryParameter("key")//参数
+            binding.info.text = "$uri\nhost=$host\npath=$path\nquery=$query\nkey=$key"
+
+            //复制到粘贴板
+            val manager: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            val mClipData = ClipData.newPlainText("Label", binding.info.text)
+            // 将ClipData内容放到系统剪贴板里。
+            manager.setPrimaryClip(mClipData)
 
         }
     }
-    }
+}
 
 
