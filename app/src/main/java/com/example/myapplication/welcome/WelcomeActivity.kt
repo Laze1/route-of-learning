@@ -3,12 +3,9 @@ package com.example.myapplication.welcome
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
-import com.example.myapplication.databinding.ActivityHiltBinding
 import com.example.myapplication.databinding.ActivityWelcomeBinding
 import com.example.myapplication.ext.inflate
 
@@ -19,8 +16,6 @@ class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
-        val intent = intent
-        val scheme = intent.scheme
         val uri = intent.data
         if (uri != null) {
             val host = uri.host

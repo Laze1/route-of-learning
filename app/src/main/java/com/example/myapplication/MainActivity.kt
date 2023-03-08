@@ -11,6 +11,7 @@ import com.example.myapplication.ext.onClick
 import com.example.myapplication.ext.startActivity
 import com.example.myapplication.flow.FlowActivity
 import com.example.myapplication.hilt.HiltActivity
+import com.example.myapplication.jni.JNIActivity
 import com.example.myapplication.observer.EventBus
 import com.example.myapplication.observer.EventBusActivity
 import com.example.myapplication.observer.Subscriber
@@ -54,6 +55,9 @@ class MainActivity : AppCompatActivity() {
             }
             btnUrl.onClick {
                 goPage()
+            }
+            btnJNI.onClick {
+                startActivity(JNIActivity::class.java)
             }
         }
     }
