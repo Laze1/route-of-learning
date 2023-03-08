@@ -16,7 +16,7 @@ class JNIActivity : AppCompatActivity() {
         setContentView(R.layout.activity_jniactivity)
 
         binding.click.setOnClickListener {
-            binding.showText.text = JNIClass.intFromJNI().toString()
+            binding.showText.text = JNILoader().intFromJNI().toString()
         }
     }
 
