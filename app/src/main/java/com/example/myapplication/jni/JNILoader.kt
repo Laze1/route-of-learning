@@ -8,4 +8,6 @@ class JNILoader {
     }
 
     external fun intFromJNI(): Int
+
+    external fun stringFromJNI(): String
 }
