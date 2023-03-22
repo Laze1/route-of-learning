@@ -1,7 +1,7 @@
 package com.example.myapplication.sqlite
 
 data class ULogBean (
-    val id:Long,
+    val id:Long? = null,
     val userid:String,
     val vin:String,
     val content:String,
