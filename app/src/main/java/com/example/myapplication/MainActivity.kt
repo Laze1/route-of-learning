@@ -16,6 +16,7 @@ import com.example.myapplication.observer.EventBus
 import com.example.myapplication.observer.EventBusActivity
 import com.example.myapplication.observer.Subscriber
 import com.example.myapplication.paging.PagingActivity
+import com.example.myapplication.sqlite.SQLiteActivity
 import com.example.myapplication.workmanager.WorkManagerActivity
 
 
@@ -58,6 +59,9 @@ class MainActivity : AppCompatActivity() {
             }
             btnJNI.onClick {
                 startActivity(JNIActivity::class.java)
+            }
+            btnSQLite.onClick {
+                startActivity(SQLiteActivity::class.java)
             }
         }
     }

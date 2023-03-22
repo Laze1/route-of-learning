@@ -65,6 +65,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="JNI" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSQLite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="SQLite" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.core.widget.NestedScrollView>
