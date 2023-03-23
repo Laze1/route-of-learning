@@ -10,4 +10,6 @@ class JNILoader {
     external fun intFromJNI(): Int
 
     external fun stringFromJNI(): String
+
+    external fun setJniName(name: String)
 }

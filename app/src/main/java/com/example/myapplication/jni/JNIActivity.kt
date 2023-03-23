@@ -17,6 +17,11 @@ class JNIActivity : AppCompatActivity() {
         binding.click.setOnClickListener {
             binding.showText.text = "调用${JNILoader().intFromJNI()}结果：${JNILoader().stringFromJNI()}"
         }
+
+        binding.click2.setOnClickListener {
+            JNILoader().setJniName("New name is 'BBD' ")
+            binding.showText2.text = JniGetInfo.jniName
+        }
     }
 
 }
